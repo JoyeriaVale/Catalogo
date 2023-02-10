@@ -153,7 +153,9 @@
                     </div>            
                 </div>
             </div>
-        </div> <!-- row -->
+        </div>
+        <div class="scrollup" href="#"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
+        <!-- row -->
         <!--<div class="row tm-mb-90">
             <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
                 <a href="javascript:void(0);" class="btn btn-primary tm-btn-prev mb-2 disabled">Previous</a>
@@ -207,5 +209,59 @@
             $('body').addClass('loaded');
         });
     </script>
+    <script>
+        $(document).ready(function(){
+          // Agregue desplazamiento suave a todos los enlaces
+          $(".mouse").on('click', function(event) {
+        
+            // Asegúrese de que this.hash tenga un valor antes de anular el comportamiento predeterminado
+            if (this.hash !== "") {
+              // Prevenir el comportamiento predeterminado del clic del ancla
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+        // Usando el método animate () de jQuery para agregar un desplazamiento suave de la página
+        // El número opcional (800) especifica la cantidad de milisegundos necesarios para desplazarse al área especificada
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Agregue hash (#) a la URL cuando termine de desplazarse (comportamiento de clic predeterminado)
+                window.location.hash = hash;
+              });
+            } // Fin
+          });
+        });
+        
+        //abajo hacia arriba
+        
+        // fadeIn fadeOut
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+        $('.scrollup').fadeIn();
+        } else {
+        $('.scrollup').fadeOut();
+        }
+        });
+        </script>
+        </head>
+        <div class="container">
+            <div class="row">
+            <a href="#section-2" class="mouse" aria-hidden="true">
+            <span class="mouse__wheel"></span>
+          </a>
+        </div>
+        <script>
+            // scrolltop
+        $('.scrollup').click(function (){
+        $("html,body").animate({
+        scrollTop: 0
+        }, 1000);
+        return false;
+        });
+        </script>
+    
 </body>
 </html>
