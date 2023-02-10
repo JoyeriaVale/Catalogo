@@ -244,22 +244,22 @@ a.tm-text-primary:hover { color:#666666; }
 
 .nav-link-1.active,
 .nav-link-1:hover {
-    border-color: #B58148;
+    border-color: #d6d6d6;
 }
 
 .nav-link-2.active,
 .nav-link-2:hover {
-    border-color: #B58148;
+    border-color: #d6d6d6;
 }
 
 .nav-link-3.active,
 .nav-link-3:hover {
-    border-color: #B58148;
+    border-color: #c9ab8f;
 }
 
 .nav-link-4.active,
 .nav-link-4:hover {
-    border-color: #B58148;
+    border-color: #c9ab8f;
 }
 
 .tm-search-input {
